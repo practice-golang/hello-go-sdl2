@@ -1,4 +1,9 @@
-package main
+package main // import "hello-go-sdl2"
+
+/* for gopls */
+
+// #cgo CFLAGS: -I./sdl2/x86_64-w64-mingw32/include
+import "C"
 
 import (
 	"log"

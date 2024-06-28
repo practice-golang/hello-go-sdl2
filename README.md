@@ -24,6 +24,6 @@ zig cc -target x86_64-windows-gnu main.c -Isdl2/x86_64-w64-mingw32/include/SDL2 
     * https://github.com/veandco/go-sdl2
     * https://github.com/libsdl-org/SDL
     * https://github.com/brechtsanders/winlibs_mingw
-    * https://github.com/brechtsanders/winlibs_mingw
+    * https://ziglang.org/download
     * https://github.com/abhirag/go-sdl2-tutorial?tab=readme-ov-file
     * https://lazyfoo.net/tutorials/SDL

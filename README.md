@@ -26,10 +26,12 @@ go env GOENV
 ```
 
 ## go env
+* `SRCDIR` = Project root
+
 * windows with `GOARCH=amd64` and `GOOS=windows`
 ```sh
 CGO_ENABLED=1
-CGO_CFLAGS=-O2 -g -I${SRCDIR}/_libs/include -I${SRCDIR}/_libs/include/SDL2
+CGO_CFLAGS=-O2 -g -I${SRCDIR}/go-sdl2/_libs/include -I${SRCDIR}/go-sdl2/_libs/include/SDL2
 CGO_LDFLAGS=-g -L${SRCDIR}/lib/windows_amd64_mingw -lmingw32 -lSDL2 -lSDL2main -lole32 -lgdi32 -lwinmm -lversion -lsetupapi -limm32 -loleaut32 -mwindows
 CC=zig cc -target x86_64-windows-gnu
 ```
@@ -37,8 +39,8 @@ CC=zig cc -target x86_64-windows-gnu
 * linux amd64 with `GOARCH=amd64` and `GOOS=linux`
 ```sh
 CGO_ENABLED=1
-CGO_LDFLAGS=-g -L${SRCDIR}/lib/linux_amd64 -lSDL2 -lSDL2main
-CGO_LDFLAGS=-g -L${SRCDIR}/_libs -lSDL2_linux_amd64 -lSDL2main_linux_amd64
+CGO_CFLAGS=-O2 -g -I${SRCDIR}/go-sdl2/_libs/include -I${SRCDIR}/go-sdl2/_libs/include/SDL2
+CGO_LDFLAGS=-g -static -L${SRCDIR}/lib/linux_amd64 -lSDL2 -lSDL2main
 CC=zig cc -target x86_64-linux-gnu
 ```
 

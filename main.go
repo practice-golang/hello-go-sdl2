@@ -2,7 +2,7 @@ package main // import "hello-go-sdl2"
 
 /* for gopls */
 
-// #cgo CFLAGS: -I./sdl2/x86_64-w64-mingw32/include
+// #cgo CFLAGS: -Igo-sdl2/_libs/include
 import "C"
 
 import (

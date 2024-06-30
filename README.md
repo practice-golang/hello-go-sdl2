@@ -1,7 +1,7 @@
 Taste `go-sdl2` cross compilation using `zig cc`
 
 
-## Test c using [MinGW](https://github.com/brechtsanders/winlibs_mingw)
+## Test c using [MinGW](https://github.com/brechtsanders/winlibs_mingw) or [Zig](https://github.com/ziglang/zig)
 * Change main.c_ -> main.c then run below
 ```sh
 # gcc -o main main.c -Isdl2/x86_64-w64-mingw32/include/SDL2 -Lsdl2/x86_64-w64-mingw32/lib -lmingw32 -lSDL2main -lSDL2 -lole32 -lgdi32 -lversion -lsetupapi -limm32 -mwindows
